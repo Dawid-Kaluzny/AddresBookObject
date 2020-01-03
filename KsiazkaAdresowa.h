@@ -8,11 +8,12 @@
 using namespace std;
 
 class KsiazkaAdresowa {
-UzytkownikMenadzer uzytkownikMenadzer;
+    UzytkownikMenadzer uzytkownikMenadzer;
 
 public:
-void rejestracjaUzytkownika();
-void wypiszWszystkichUzytkownikow();
+    KsiazkaAdresowa();
+    void rejestracjaUzytkownika();
+    void wypiszWszystkichUzytkownikow();
 };
 
 #endif
