@@ -96,6 +96,11 @@ int UzytkownikMenadzer::logowanieUzytkownika() {
     return idZalogowanegoUzytkownika;
 }
 
+void UzytkownikMenadzer::wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+}
+
 void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
 {
     string noweHaslo = "";
