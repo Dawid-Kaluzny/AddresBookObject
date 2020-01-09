@@ -1,9 +1,5 @@
 #include "PlikZAdresatami.h"
 
-PlikZAdresatami::PlikZAdresatami() {
-    nazwaPlikuZAdresatami = "Adresaci.txt";
-}
-
 PlikZAdresatami::pobierzIdOstatniegoAdresataZPliku()
 {
     return idOstatniegoAdresataZPliku;
