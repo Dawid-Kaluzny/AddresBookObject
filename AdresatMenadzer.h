@@ -22,7 +22,9 @@ class AdresatMenadzer {
     void wyswietlDaneAdresata(Adresat adresat);
 
 public:
-    AdresatMenadzer();
+    AdresatMenadzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {
+        idOstatniegoAdresata = 0;
+    };
     int dodajAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
