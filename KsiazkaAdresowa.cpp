@@ -20,7 +20,17 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
     uzytkownikMenadzer.zmianaHaslaZalogowanegoUzytkownika();
 }
 
+void KsiazkaAdresowa::dodajAdresata()
+{
+    adresatMenadzer.dodajAdresata(uzytkownikMenadzer.pobierzIdZalogowanegoUzytkownika());
+}
+
 void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 {
     uzytkownikMenadzer.wypiszWszystkichUzytkownikow();
+}
+
+void KsiazkaAdresowa::wypiszWszystkichAdresatow()
+{
+    adresatMenadzer.wyswietlWszystkichAdresatow();
 }

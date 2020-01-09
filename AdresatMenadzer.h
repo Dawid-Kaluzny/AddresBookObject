@@ -13,12 +13,16 @@ using namespace std;
 
 class AdresatMenadzer {
 vector <Adresat> adresaci;
+ int idOstatniegoAdresata;
 
-Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
+Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
 string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+void wyswietlDaneAdresata(Adresat adresat);
 
 public:
-    int dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
+    AdresatMenadzer();
+    int dodajAdresata(int idZalogowanegoUzytkownika);
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif
