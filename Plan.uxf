@@ -24,6 +24,9 @@
 + dodajAdresata () : void
 + wyswietlWszystkichAdresatow () : void
 + czyUzytkownikJestZalogowany () : Bool
++ wybierzOpcjeZMenuGlownego () : Char
++ wybierzOpcjeZMenuUzytkownika () : Char
+
 
 </panel_attributes>
     <additional_attributes/>
@@ -111,6 +114,7 @@
 + konwerjsaIntNaString () : String
 + konwersjaStringNaInt () : Integer
 + wczytajLinie() : String
++ wczytajZnak () : Char
 + czyPlikJestPusty () : Bool
 + zamienPierszaLitereNaDuzaAPozostaleNaMale () : String
 </panel_attributes>
