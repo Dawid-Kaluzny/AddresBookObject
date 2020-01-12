@@ -1,7 +1,6 @@
 #include "UzytkownikMenadzer.h"
 
-int UzytkownikMenadzer::pobierzIdZalogowanegoUzytkownika()
-{
+int UzytkownikMenadzer::pobierzIdZalogowanegoUzytkownika() {
     return idZalogowanegoUzytkownika;
 }
 
@@ -52,18 +51,6 @@ bool UzytkownikMenadzer::czyIstniejeLogin(string login) {
     return false;
 }
 
-void UzytkownikMenadzer::wypiszWszystkichUzytkownikow() {
-    for (int i = 0; i < uzytkownicy.size(); i++) {
-        cout << uzytkownicy[i].pobierzId() << endl;
-        cout << uzytkownicy[i].pobierzLogin() << endl;
-        cout << uzytkownicy[i].pobierzHaslo() << endl;
-    }
-}
-
-void UzytkownikMenadzer::wczytajUzytkownikowZPliku() {
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
 int UzytkownikMenadzer::logowanieUzytkownika() {
     string login = "", haslo = "";
     idZalogowanegoUzytkownika = 0;
@@ -96,21 +83,17 @@ int UzytkownikMenadzer::logowanieUzytkownika() {
     return idZalogowanegoUzytkownika;
 }
 
-void UzytkownikMenadzer::wylogowanieUzytkownika()
-{
+void UzytkownikMenadzer::wylogowanieUzytkownika() {
     idZalogowanegoUzytkownika = 0;
 }
 
-void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
-{
+void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika() {
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
     noweHaslo = MetodyPomocnicze::wczytajLinie();
 
-    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
-    {
-        if (itr -> pobierzId() == idZalogowanegoUzytkownika)
-        {
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++) {
+        if (itr -> pobierzId() == idZalogowanegoUzytkownika) {
             itr -> ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
             system("pause");
@@ -119,5 +102,11 @@ void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
+bool UzytkownikMenadzer::czyUzytkownikJestZalogowany() {
+    if (idZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
+}
 
 

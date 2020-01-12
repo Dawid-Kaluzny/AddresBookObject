@@ -4,24 +4,26 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>20</y>
+      <x>0</x>
+      <y>0</y>
       <w>330</w>
       <h>230</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
 - uzytkownikMenadzer : UzytkownikMenadzer
-- adresatMenadzer : AdresatMenadzer
+- *adresatMenadzer : AdresatMenadzer
+- NAZWA_PLIKU_Z_ADRESATAMI : String
 --
 + KsiazkaAdresowa ()
++ ~KsiazkaAdresowa()
 + rejestracjaUzytkownika () : void
 + logowanieUzytkownika () : void
 + wylogowanieUzytkownika () : void
 + zmianaHaslaZalogowanegoUzytkownika () : void
 + dodajAdresata () : void
-+ wypiszWszystkichUzytkowinkow () : void
-+ wypiszWszystkichAdresatow () : void
++ wyswietlWszystkichAdresatow () : void
++ czyUzytkownikJestZalogowany () : Bool
 
 </panel_attributes>
     <additional_attributes/>
@@ -29,8 +31,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
-      <y>110</y>
+      <x>720</x>
+      <y>90</y>
       <w>130</w>
       <h>180</h>
     </coordinates>
@@ -45,8 +47,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
-      <y>110</y>
+      <x>360</x>
+      <y>90</y>
       <w>320</w>
       <h>250</h>
     </coordinates>
@@ -61,8 +63,7 @@
 + logowanieUzytkownika () : Integer
 + wylogowanieUzytkownika () : void
 + zmianaHaslaZalogowanegoUzytkownika () : void
-+ wypiszWszystkichUzytkownikow () : void
-+ wczytajUzytkownikowZPliku () : void
++ czyUzytkownikJestZalogowany () : Bool
 - podajDaneNowegoUZytkownika () : Uzytkownik
 - pobierzIDNowegoUzytkownika () : Integer
 - czyIstniejeLogin () : Bool
@@ -77,20 +78,19 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>940</x>
-      <y>110</y>
+      <x>870</x>
+      <y>90</y>
       <w>390</w>
       <h>200</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
-- nazwaPlikuZUzytkownikami : const string
+- NAZWA_PLIKU_Z_UZYTKOWNIKAMI : String
 --
 + PlikZUzytkownikami()
 + dopiszUzytkownikaDoPliku () : void
 + zapiszWszystkichUzytkownikowDoPliku () : void
 + wczytajUzytkownikowZPliku () : vector &lt;Uzytkownik&gt;
-- czyPlikJestPusty () : Bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami () : string
 - pobierzDaneUzytkownika () : Uzytkownik
 
@@ -100,10 +100,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>590</y>
-      <w>230</w>
-      <h>100</h>
+      <x>530</x>
+      <y>570</y>
+      <w>260</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
@@ -111,14 +111,16 @@
 + konwerjsaIntNaString () : String
 + konwersjaStringNaInt () : Integer
 + wczytajLinie() : String
-+ czyPlikJestPusty () : Bool</panel_attributes>
++ czyPlikJestPusty () : Bool
++ zamienPierszaLitereNaDuzaAPozostaleNaMale () : String
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
-      <y>380</y>
+      <x>560</x>
+      <y>360</y>
       <w>180</w>
       <h>180</h>
     </coordinates>
@@ -131,6 +133,8 @@
 - numerTelefonu : String
 - email : String
 - adres : String
+--
++ Adresat ()
 
 </panel_attributes>
     <additional_attributes/>
@@ -138,22 +142,21 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>190</x>
-      <y>380</y>
+      <x>120</x>
+      <y>360</y>
       <w>380</w>
       <h>240</h>
     </coordinates>
     <panel_attributes>AdresatMenadzer
 --
 - adresaci : vector &lt;Adresat&gt;
-- idOstatniegoAdresata : Integer
+- ID_ZALOGOWANEGO_UZYTKOWNIKA : Integer
 - plikZAdresami : PlikZAdresami
 --
 + AdresatMenadzer ()
 + dodajAdresata () : Integer
 + wyswietlWszystkichAdresatow () : void
 - podajDaneNowegoAdresata () : Adresat
-- zamienPierwszaLitereNaDuzaPozostaleNaMale () : String
 - wyswietlDaneAdresata () : void
 
 
@@ -163,19 +166,19 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
-      <y>380</y>
+      <x>800</x>
+      <y>360</y>
       <w>440</w>
       <h>240</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
-- nazwaPlikuZAdresatami : String
-- idOstatniegoAdresataZPliku : Integer
+- NAZWA_PLIKU_Z_ADRESATAMI : String
+- idOstatniegoAdresata : Integer
 --
 + PlikZAdresatami ()
 + pobierzIdOstatniegoAdresataZPliku () : Integer
-+ dopiszAdresataDoPliku () : void
++ dopiszAdresataDoPliku () : Bool
 + wczytajAdresatowZalogowanegoUzytkownikaZPliku () : vector &lt;Adresat&gt;
 - zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami () : String
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami () : Integer

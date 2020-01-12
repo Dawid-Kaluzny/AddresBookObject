@@ -4,8 +4,6 @@
 #include <iostream>
 #include <vector>
 #include <windows.h>
-#include <fstream>
-#include <sstream>
 
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
@@ -23,6 +21,7 @@ class UzytkownikMenadzer {
 
 public:
     UzytkownikMenadzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {
+        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
         idZalogowanegoUzytkownika = 0;
     };
     int pobierzIdZalogowanegoUzytkownika();
@@ -30,8 +29,7 @@ public:
     int logowanieUzytkownika();
     void wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
-    void wypiszWszystkichUzytkownikow();
-    void wczytajUzytkownikowZPliku();
+    bool czyUzytkownikJestZalogowany();
 };
 
 #endif
