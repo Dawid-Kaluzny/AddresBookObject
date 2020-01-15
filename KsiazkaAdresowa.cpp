@@ -46,6 +46,11 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
     adresatMenadzer->wyswietlWszystkichAdresatow();
 }
 
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenadzer->usunAdresata();
+}
+
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany() {
     return uzytkownikMenadzer.czyUzytkownikJestZalogowany();
 }
