@@ -27,6 +27,7 @@ public:
     };
     int dodajAdresata();
     void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
     void wyswietlWszystkichAdresatow();
 };
 

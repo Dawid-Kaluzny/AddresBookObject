@@ -6,8 +6,8 @@
     <coordinates>
       <x>80</x>
       <y>70</y>
-      <w>420</w>
-      <h>290</h>
+      <w>430</w>
+      <h>300</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
@@ -23,6 +23,7 @@
 + zmianaHaslaZalogowanegoUzytkownika () : void
 + dodajAdresata () : void
 + wyszukajAdresatowPoImieniu () : void
++ wyszukajAdresatowPoNazwisku () : void
 + wyswietlWszystkichAdresatow () : void
 + czyUzytkownikJestZalogowany () : Bool
 + wybierzOpcjeZMenuGlownego () : Char
@@ -161,6 +162,7 @@
 + AdresatMenadzer ()
 + dodajAdresata () : Integer
 + wyszukajAdresatowPoImieniu () : void
++ wyszukajAdresatowPoNazwisku () : void
 + wyswietlWszystkichAdresatow () : void
 - podajDaneNowegoAdresata () : Adresat
 - wyswietlDaneAdresata () : void
