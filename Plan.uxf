@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
-      <y>70</y>
+      <x>0</x>
+      <y>0</y>
       <w>430</w>
       <h>300</h>
     </coordinates>
@@ -25,6 +25,7 @@
 + wyszukajAdresatowPoImieniu () : void
 + wyszukajAdresatowPoNazwisku () : void
 + wyswietlWszystkichAdresatow () : void
++ usunAdresata () : void
 + czyUzytkownikJestZalogowany () : Bool
 + wybierzOpcjeZMenuGlownego () : Char
 + wybierzOpcjeZMenuUzytkownika () : Char
@@ -36,8 +37,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>160</y>
+      <x>830</x>
+      <y>90</y>
       <w>130</w>
       <h>180</h>
     </coordinates>
@@ -52,8 +53,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>550</x>
-      <y>160</y>
+      <x>470</x>
+      <y>90</y>
       <w>320</w>
       <h>250</h>
     </coordinates>
@@ -83,8 +84,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1060</x>
-      <y>160</y>
+      <x>980</x>
+      <y>90</y>
       <w>390</w>
       <h>200</h>
     </coordinates>
@@ -105,10 +106,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>640</y>
-      <w>260</w>
-      <h>120</h>
+      <x>540</x>
+      <y>630</y>
+      <w>360</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
@@ -119,14 +120,15 @@
 + wczytajZnak () : Char
 + czyPlikJestPusty () : Bool
 + zamienPierszaLitereNaDuzaAPozostaleNaMale () : String
++ wczytajLiczbeCalkowita () : Integer
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>750</x>
-      <y>430</y>
+      <x>670</x>
+      <y>360</y>
       <w>180</w>
       <h>180</h>
     </coordinates>
@@ -148,10 +150,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
-      <y>430</y>
-      <w>380</w>
-      <h>240</h>
+      <x>230</x>
+      <y>360</y>
+      <w>390</w>
+      <h>250</h>
     </coordinates>
     <panel_attributes>AdresatMenadzer
 --
@@ -164,9 +166,11 @@
 + wyszukajAdresatowPoImieniu () : void
 + wyszukajAdresatowPoNazwisku () : void
 + wyswietlWszystkichAdresatow () : void
++ usunAdresata () : Integer
 - podajDaneNowegoAdresata () : Adresat
 - wyswietlDaneAdresata () : void
 - wyswietlIloscWyszukanychAdresatow () : void
+- podajIdWybranegoAdresata () : Integer
 
 
 </panel_attributes>
@@ -175,25 +179,29 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>990</x>
-      <y>430</y>
+      <x>910</x>
+      <y>360</y>
       <w>440</w>
       <h>240</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
 - NAZWA_PLIKU_Z_ADRESATAMI : String
+- NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI : String
 - idOstatniegoAdresata : Integer
 --
 + PlikZAdresatami ()
 + pobierzIdOstatniegoAdresataZPliku () : Integer
 + dopiszAdresataDoPliku () : Bool
 + wczytajAdresatowZalogowanegoUzytkownikaZPliku () : vector &lt;Adresat&gt;
++ usunAdresataZPliku () : void
 - zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami () : String
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami () : Integer
 - pobierzDaneAdresata () : Adresat
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami () : Integer
-- pobierzLiczbe () : String</panel_attributes>
+- pobierzLiczbe () : String
+- usunPlik () : void
+- zamienNazwePliku () : void</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

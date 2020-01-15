@@ -17,6 +17,7 @@ public:
     static char wczytajZnak();
     static bool czyPlikJestPusty(fstream &plikTekstowy);
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    int static wczytajLiczbeCalkowita();
 };
 
 #endif
