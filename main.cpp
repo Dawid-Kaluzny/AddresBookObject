@@ -43,7 +43,7 @@ int main() {
                 ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-                //edytujAdresata(adresaci);
+                ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
@@ -60,11 +60,14 @@ int main() {
 
 #include "AdresatMenadzer.h"
 
-int Adresatmain ()
+int amain ()
 {
     AdresatMenadzer adresatMenadzer("Adresaci1.txt", 1);
     adresatMenadzer.wyswietlWszystkichAdresatow();
     adresatMenadzer.usunAdresata();
     adresatMenadzer.wyswietlWszystkichAdresatow();
     adresatMenadzer.dodajAdresata();
+    adresatMenadzer.wyswietlWszystkichAdresatow();
+    adresatMenadzer.edytujAdresata();
+    adresatMenadzer.wyswietlWszystkichAdresatow();
 }

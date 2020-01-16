@@ -5,9 +5,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>0</y>
-      <w>430</w>
-      <h>300</h>
+      <y>10</y>
+      <w>470</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
@@ -26,6 +26,7 @@
 + wyszukajAdresatowPoNazwisku () : void
 + wyswietlWszystkichAdresatow () : void
 + usunAdresata () : void
++ edytujAdresata () : void
 + czyUzytkownikJestZalogowany () : Bool
 + wybierzOpcjeZMenuGlownego () : Char
 + wybierzOpcjeZMenuUzytkownika () : Char
@@ -37,7 +38,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>830</x>
+      <x>870</x>
       <y>90</y>
       <w>130</w>
       <h>180</h>
@@ -53,7 +54,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>510</x>
       <y>90</y>
       <w>320</w>
       <h>250</h>
@@ -84,7 +85,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
+      <x>1020</x>
       <y>90</y>
       <w>390</w>
       <h>200</h>
@@ -106,7 +107,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
+      <x>580</x>
       <y>630</y>
       <w>360</w>
       <h>170</h>
@@ -127,7 +128,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>670</x>
+      <x>710</x>
       <y>360</y>
       <w>180</w>
       <h>180</h>
@@ -150,7 +151,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
+      <x>270</x>
       <y>360</y>
       <w>390</w>
       <h>250</h>
@@ -167,10 +168,12 @@
 + wyszukajAdresatowPoNazwisku () : void
 + wyswietlWszystkichAdresatow () : void
 + usunAdresata () : Integer
++ edytujAdresata () : void
 - podajDaneNowegoAdresata () : Adresat
 - wyswietlDaneAdresata () : void
 - wyswietlIloscWyszukanychAdresatow () : void
 - podajIdWybranegoAdresata () : Integer
+- wybierzOpcjeZMenuEdycja () : Char
 
 
 </panel_attributes>
@@ -179,10 +182,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>360</y>
-      <w>440</w>
-      <h>240</h>
+      <x>950</x>
+      <y>350</y>
+      <w>530</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
@@ -195,13 +198,15 @@
 + dopiszAdresataDoPliku () : Bool
 + wczytajAdresatowZalogowanegoUzytkownikaZPliku () : vector &lt;Adresat&gt;
 + usunAdresataZPliku () : void
++ zaktualizujDaneWybranegoAdresata () : void
 - zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami () : String
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami () : Integer
 - pobierzDaneAdresata () : Adresat
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami () : Integer
 - pobierzLiczbe () : String
 - usunPlik () : void
-- zamienNazwePliku () : void</panel_attributes>
+- zamienNazwePliku () : void
+- edytujAdresataWPliku () : void</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
