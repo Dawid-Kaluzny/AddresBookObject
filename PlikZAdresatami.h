@@ -8,11 +8,11 @@
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
+#include "PlikTekstowy.h"
 
 using namespace std;
 
-class PlikZAdresatami {
-    const string NAZWA_PLIKU_Z_ADRESATAMI;
+class PlikZAdresatami :public PlikTekstowy{
     const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
 
@@ -25,7 +25,7 @@ class PlikZAdresatami {
     void zmienNazwePliku();
     void edytujAdresataWPliku(int idEdytowanegoAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 public:
-    PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami), NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI("Tymczasowo " + nazwaPlikuZAdresatami)  {
+    PlikZAdresatami(string nazwaPlikuZAdresatami) : PlikTekstowy(nazwaPlikuZAdresatami), NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI("Tymczasowo " + nazwaPlikuZAdresatami)  {
         idOstatniegoAdresata = 0;
     };
     int pobierzIdOstatniegoAdresata();

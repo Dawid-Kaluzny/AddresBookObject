@@ -56,18 +56,3 @@ int main() {
     }
     return 0;
 }
-
-
-#include "AdresatMenadzer.h"
-
-int amain ()
-{
-    AdresatMenadzer adresatMenadzer("Adresaci1.txt", 1);
-    adresatMenadzer.wyswietlWszystkichAdresatow();
-    adresatMenadzer.usunAdresata();
-    adresatMenadzer.wyswietlWszystkichAdresatow();
-    adresatMenadzer.dodajAdresata();
-    adresatMenadzer.wyswietlWszystkichAdresatow();
-    adresatMenadzer.edytujAdresata();
-    adresatMenadzer.wyswietlWszystkichAdresatow();
-}

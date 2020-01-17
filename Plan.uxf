@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>10</y>
+      <y>0</y>
       <w>470</w>
       <h>320</h>
     </coordinates>
@@ -39,7 +39,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>870</x>
-      <y>90</y>
+      <y>70</y>
       <w>130</w>
       <h>180</h>
     </coordinates>
@@ -55,7 +55,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>510</x>
-      <y>90</y>
+      <y>70</y>
       <w>320</w>
       <h>250</h>
     </coordinates>
@@ -86,13 +86,11 @@
     <id>UMLClass</id>
     <coordinates>
       <x>1020</x>
-      <y>90</y>
+      <y>70</y>
       <w>390</w>
       <h>200</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
---
-- NAZWA_PLIKU_Z_UZYTKOWNIKAMI : String
 --
 + PlikZUzytkownikami()
 + dopiszUzytkownikaDoPliku () : void
@@ -119,7 +117,6 @@
 + konwersjaStringNaInt () : Integer
 + wczytajLinie() : String
 + wczytajZnak () : Char
-+ czyPlikJestPusty () : Bool
 + zamienPierszaLitereNaDuzaAPozostaleNaMale () : String
 + wczytajLiczbeCalkowita () : Integer
 </panel_attributes>
@@ -129,7 +126,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>710</x>
-      <y>360</y>
+      <y>340</y>
       <w>180</w>
       <h>180</h>
     </coordinates>
@@ -152,7 +149,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>270</x>
-      <y>360</y>
+      <y>340</y>
       <w>390</w>
       <h>250</h>
     </coordinates>
@@ -182,14 +179,13 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>950</x>
-      <y>350</y>
+      <x>970</x>
+      <y>300</y>
       <w>530</w>
       <h>320</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
-- NAZWA_PLIKU_Z_ADRESATAMI : String
 - NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI : String
 - idOstatniegoAdresata : Integer
 --
@@ -207,6 +203,22 @@
 - usunPlik () : void
 - zamienNazwePliku () : void
 - edytujAdresataWPliku () : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1060</x>
+      <y>650</y>
+      <w>150</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>PlikTekstowy
+--
+- NAZWA_PLIKU
+--
++ PlikTekstowy ()
++ czyPlikJestPusty</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
